@@ -1,0 +1,17 @@
+import os
+
+os.system("apt-get update && apt-get install -y git curl python-pip vim")
+os.system("git clone https://github.com/QingdaoU/OnlineJudge.git /home/OnlineJudge")
+os.system("curl -sSL https://get.daocloud.io/docker | sh")
+os.system("pip install docker-compose")
+os.system("mkdir -p /home/data/mysql /home/data/redis /home/test_case /home/log /home/upload")
+os.system("docker pull registry.aliyuncs.com/v-image/redis")
+os.system("docker tag registry.aliyuncs.com/v-image/redis redis")
+os.system("docker pull registry.aliyuncs.com/v-image/mysql")
+os.system("docker tag registry.aliyuncs.com/v-image/mysql mysql")
+os.system("docker pull registry.aliyuncs.com/v-image/nginx")
+os.system("docker tag registry.aliyuncs.com/v-image/nginx nginx")
+os.system("docker pull registry.aliyuncs.com/v-image/oj_web_server")
+os.system("docker tag registry.aliyuncs.com/v-image/oj_web_server qduoj/oj_web_server")
+os.system("docker pull registry.aliyuncs.com/v-image/judger")
+os.system("docker tag registry.aliyuncs.com/v-image/judger qduoj/judger")
